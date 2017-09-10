@@ -487,7 +487,6 @@ body {
     text-indent:100%;
     white-space: nowrap;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 
 @media (max-width: 400px) {

@@ -1,2 +1,2 @@
-# hgeddon.github.io
+# hGedd.github.io
 Harmergeddon Official
