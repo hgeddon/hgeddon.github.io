@@ -490,6 +490,12 @@ body {
     margin-bottom: 10px;
 }
 
+@media (max-width: 400px) {
+    #social li {
+        display: block;
+    }
+}
+
 #fbsm {
     background:url('./smicons/facebook.png');
     background-repeat: no-repeat;
