@@ -486,8 +486,6 @@ body {
     border:0;
     font-size: 0;
     line-height: 0;
-    color: transparent;
-    visibility: visible;
 }
 
 @media (max-width: 400px) {
