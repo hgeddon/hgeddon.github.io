@@ -50,6 +50,12 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+p {
+  color: #777;
+}
+h1, h2, h3, h4 {
+  color: #777;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -465,6 +471,24 @@ body {
  padding-top: 10%
 }
 
+#AboutImage {
+ display: block;
+ margin: auto;
+ max-width: 98%;
+ height: auto;
+ padding-top: 0%  
+}
+
+#about {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#signup {
+ display: block;
+ width: 100%;
+}
+
 #social {
     display: table;
     margin: 40px auto;
@@ -484,8 +508,9 @@ body {
     width: 60px;
     height: 60px;
     border:0;
-    font-size: 0;
-    color: transparent;
+    text-indent:100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media (max-width: 400px) {
@@ -555,4 +580,54 @@ body {
     background:url('./smicons/youtube-hover.gif');
     background-repeat: no-repeat;
     background-size: 100% 100%;    
+}
+
+#etsm {
+    background:url('./smicons/etsy.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: 10px;
+}
+
+#etsm:hover {
+    background:url('./smicons/etsy-hover.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+}
+
+#copyright {
+  text-align: center;
+  font-style: italic;
+}
+#flavour {
+  font-style: italic;
+}
+
+/* Services */
+/* the buttons */
+button.accordion {
+    background-color: black;
+    color: #777;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+/* hover */
+button.accordion.active, button.accordion:hover {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100% auto; 
+}
+
+/* the content */
+div.panel {
+    padding: 0 18px;
+    background-color: black;
+    max-height: 0;
+    overflow: hidden;
+    text-align: justify;
 }
