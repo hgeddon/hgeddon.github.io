@@ -471,24 +471,6 @@ body {
  padding-top: 10%
 }
 
-#AboutImage {
- display: block;
- margin: auto;
- max-width: 98%;
- height: auto;
- padding-top: 0%  
-}
-
-#about {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-#signup {
- display: block;
- width: 100%;
-}
-
 #social {
     display: table;
     margin: 40px auto;
@@ -594,7 +576,23 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%; 
 }
+#AboutImage {
+ display: block;
+ margin: auto;
+ max-width: 98%;
+ height: auto;
+ padding-top: 0%  
+}
 
+#about {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#signup {
+ display: block;
+ width: 100%;
+}
 #copyright {
   text-align: center;
   font-style: italic;
@@ -602,7 +600,6 @@ body {
 #flavour {
   font-style: italic;
 }
-
 /* Services */
 /* the buttons */
 button.accordion {
