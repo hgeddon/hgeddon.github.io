@@ -694,26 +694,6 @@ div.panel {
   text-align: center;
 }
 
-/* service panels */
-.service-panel {
-  position: relative;
-  height: auto;
-  overflow: hidden;
-  padding-bottom: 10px;
-  display: block;
-}
-
-.service-grid {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  text-align: center;
-}
-.service-grid p {
-  text-align: justify;
-}
-
 /* SLIDESHOW */
 /* Slideshow container */
 .slideshow-container {
