@@ -233,8 +233,10 @@
 			    var panel = this.nextElementSibling;
 			    if (panel.style.maxHeight){
 			      panel.style.maxHeight = null;
+				    panel.style.paddingBottom = "0px";
 			    } else {
 			      panel.style.maxHeight = panel.scrollHeight + "px";
+				panel.style.paddingBottom = "15px";
 			    }
 			    panel.scrollIntoView({behavior: "smooth", block:"start", inline: "nearest"});
 			  }
