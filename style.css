@@ -469,6 +469,15 @@ body {
   margin: 0;
 }
 
+.pages h1 {
+  color: black;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
 #page-label-1 {
   background:url('./gallery/heading_parallax_1.png');
   background-attachment: fixed;
@@ -503,16 +512,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-
-.pages h1 {
-  color: black;
-  text-align: center;
-  width: 100%;
-  background-color: white;
-  padding-top: 1%;
-  padding-bottom: 1%;
 }
 
 #firstline {
