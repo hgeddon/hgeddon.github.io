@@ -53,11 +53,11 @@ xmlns:fb="http://ogp.me/ns/fb#">
 			<!--NAV-->
 			<nav id="top-nav">
 				<a href="#home"><h3>Home</h3></a>
-				<a href="#about"><h3>About</h3></a>
-				<a href="#releases"><h3>Releases</h3></a>
-				<a href="#gallery"><h3>Gallery</h3></a>
-				<a href="#video"><h3>Video</h3></a>
-				<a href="#mailing-list"><h3>Mailing List</h3></a>
+				<a href="#about" id="n1"><h3>About</h3></a>
+				<a href="#releases" id="n2"><h3>Releases</h3></a>
+				<a href="#gallery" id="n3"><h3>Gallery</h3></a>
+				<a href="#video" id="n4"><h3>Video</h3></a>
+				<a href="#mailing-list" id="n5"><h3>Mailing List</h3></a>
 			</nav>
 			<!--SOCIAL MEDIA-->
 			<nav id="social-wrapper">
@@ -90,7 +90,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 		<!--SECTIONS-->
 		<section class="pages" id="About">
-			<a class="anchor" name="about"></a>
+			<a class="anchor" id="about"></a>
 
 			<article>
 				<h1 id="page-label-1">About</h1>
@@ -262,26 +262,85 @@ xmlns:fb="http://ogp.me/ns/fb#">
 			var sticky = navbar.offsetTop;
 			var lastOffset = -1;
 
+			var navLabels = [
+				document.getElementById("n1"),
+				document.getElementById("n2"),
+				document.getElementById("n3"),
+				document.getElementById("n4"),
+				document.getElementById("n5")
+			];
+
+			var pageElements = [
+				document.getElementById("About"),
+				document.getElementById("Releases"),
+				document.getElementById("Gallery"),
+				document.getElementById("Video"),
+				document.getElementById("Mailing-List")
+			];
+			var elementRects = [];
+			var i;
+			var len = pageElements.length;
+
+			var navBound = navbar.getBoundingClientRect();
+			var navSize = navBound.bottom - navBound.top;
+			var anchors = [
+				document.getElementById("about"),
+				document.getElementById("releases"),
+				document.getElementById("gallery"),
+				document.getElementById("video"),
+				document.getElementById("mailing-list")
+			];
+			for(i = 0; i < len; i++) {
+				anchors[i].style.top = -navSize + 1 + "px";
+			}
+
 			// nav bar sticky
 			// When the user scrolls the page, execute myFunction 
-			window.onscroll = function() {myFunction()};
-			window.onresize = function() {
-				if(navbar.offsetTop > 0) {
-					sticky = navbar.offsetTop
-				}
-			};
+			window.onscroll = function() {
 			// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-			function myFunction() {
-				if (window.pageYOffset >= sticky) {
-					navbar.classList.add("sticky")
+				var yOffset = window.pageYOffset;
+				var socialWrap = document.getElementById("social-wrapper");
+
+				if (yOffset >= sticky) {
+					navbar.classList.add("sticky");
+					socialWrap.style.paddingTop = navSize + "px";
 				} else {
 					navbar.classList.remove("sticky");
+					socialWrap.style.paddingTop = 0 + "px";
 				}
-				if(window.pageYOffset == 0 && lastOffset > 0) {
+				if(yOffset == 0 && lastOffset > 0) {
 					sticky = navbar.offsetTop;
 				}
-				lastOffset = window.pageYOffset;
-			}
+				lastOffset = yOffset;
+
+				// get page coordinates
+				for(i = 0; i < len; i++) {
+					elementRects[i] = pageElements[i].getBoundingClientRect();
+				}
+
+				// if in section turn nav white else turn black
+				for(i = 0; i < len; i++) {
+					if(yOffset >= (elementRects[i].top+yOffset-navSize) && yOffset <= (elementRects[i].bottom+yOffset-navSize)) {
+						//set background to white and text to black
+						navLabels[i].classList.add("inSection");
+					} else {
+						//set background to black and text to white
+						navLabels[i].classList.remove("inSection");
+					}
+				}
+			};
+
+			window.onresize = function() {
+				if(navbar.offsetTop > 0) {
+					sticky = navbar.offsetTop;
+				}
+				navBound = navbar.getBoundingClientRect();
+				navSize = navBound.bottom - navBound.top;
+
+				for(i = 0; i < len; i++) {
+					anchors[i].style.top = -navSize + 1 + "px";
+				}
+			};
 		</script>
 	</body>
 	</html>

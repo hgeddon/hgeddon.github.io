@@ -464,6 +464,10 @@ body {
   background-color: black;
 }
 
+h3 {
+  font-size: 16px;
+}
+
 .pages {
   min-height: 100vh;
   margin: 0;
@@ -545,7 +549,6 @@ body {
 }
 #top-nav h3 {
   color: white;
-  background-color: black;
   transition: 0.4s
 }
 #top-nav a:hover {
@@ -554,7 +557,6 @@ body {
 }
 #top-nav a:hover h3 {
   color: black;
-  background-color: white;
   transition: 0.4s;
 }
 .sticky {
@@ -562,8 +564,11 @@ body {
   top: 0;
   width: 100%;
 }
-.sticky + #social-wrapper {
-  padding-top: 52px;
+.inSection {
+  background-color: white !important;
+}
+.inSection h3 {
+  color: black !important;
 }
 
 /* ----logo---- */
@@ -714,10 +719,10 @@ body {
   padding-top: 2%;
   max-width: 100%;
 }
-a.anchor {
+.anchor {
   display: block;
   position: relative;
-  top: -52px;
+  /*top: -52px;*/
   visibility: hidden;
 }
 #flavour {
@@ -813,51 +818,6 @@ a.anchor {
 }
 .video-grid h2 {
   text-align: center;
-}
-
-/* adaptive */
-/* two lines = 594, three lines = 305, four lines = 208, five lines = 179, six lines = 172 53 */
-
-
-@media (max-width: 594px) {
-  a.anchor {
-    top: -104px;
-  }
-  .sticky + #social-wrapper {
-    padding-top: 104px;
-  }
-}
-@media (max-width: 305px) {
-  a.anchor {
-    top: -156px;
-  }
-  .sticky + #social-wrapper {
-    padding-top: 156px;
-  }
-}
-@media (max-width: 208px) {
-  a.anchor {
-    top: -208px;
-  }
-  .sticky + #social-wrapper {
-    padding-top: 208px;
-  }
-}
-@media (max-width: 179px) {
-  a.anchor {
-    top: -260px;
-  }
-  .sticky + #social-wrapper {
-    padding-top: 260px;
-  }
-}
-@media (max-width: 172px) {
-  a.anchor {
-    top: -312px;
-  }
-  .sticky + #social-wrapper {
-    padding-top: 312px;
-  }
 }
 
 @media (max-width: 550px) {
