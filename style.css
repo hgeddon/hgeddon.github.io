@@ -678,7 +678,7 @@ h3 {
   display: block;
   margin: auto;
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 200px;
   max-width: 1000px;
   z-index: -1;
