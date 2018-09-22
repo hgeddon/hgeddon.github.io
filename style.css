@@ -730,7 +730,7 @@ a.anchor {
   margin: auto;
   max-width: 100%;  
 }
-#Gallery p {
+#Gallery figcaption {
   color: white;
   font-size: 15px;
   text-align: center;
