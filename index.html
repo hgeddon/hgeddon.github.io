@@ -258,7 +258,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 		<!--SCRIPTS-->
 		<script>
-			var ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+			var ismobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
 
 			// Get the navbar
 			var navbar = document.getElementById("top-nav");
@@ -299,8 +299,8 @@ xmlns:fb="http://ogp.me/ns/fb#">
 				anchors[i].style.top = -navSize + 1 + "px";
 
 				if(ismobile) {
- 					navLabels[i].style.backgroundAttachment("inherit");
- 					navLabels[i].style.backgroundSize("100%");					
+ 					navLabels[i].style.backgroundAttachment("scroll");
+ 					navLabels[i].style.backgroundSize("100%");
 				}
 			}
 
