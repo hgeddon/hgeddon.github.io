@@ -258,8 +258,6 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 		<!--SCRIPTS-->
 		<script>
-			var ismobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
-
 			// Get the navbar
 			var navbar = document.getElementById("top-nav");
 			// Get the offset position of the navbar
@@ -297,11 +295,6 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 			for(i = 0; i < len; i++) {
 				anchors[i].style.top = -navSize + 1 + "px";
-
-				if(ismobile) {
-					navLabels[i].style.setAttribute("cssText", "background-attachment: scroll !important");
-					navLabels[i].style.setAttribute("cssText", "background-size: 100% !important");
-				}
 			}
 
 			// nav bar sticky
