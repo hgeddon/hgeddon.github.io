@@ -830,6 +830,10 @@ h3 {
   .service-grid {
     grid-template-columns: repeat(1, minmax(240px, 1fr));
   }
+  .page-label {
+    background-attachment: scroll !important;
+    background-size: 100% !important;
+  }
 }
 @media (max-width: 480px) {
   #social ul {
