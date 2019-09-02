@@ -482,35 +482,35 @@ h3 {
   padding-bottom: 1%;
 }
 
-#page-label-1 {
+#label-about {
   background:url('./gallery/heading_parallax_1.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#page-label-2 {
+#label-releases {
   background:url('./gallery/heading_parallax_3.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#page-label-3 {
+#label-video {
   background:url('./gallery/heading_parallax_2.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#page-label-4 {
+#label-gallery {
   background:url('./gallery/heading_parallax_5.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#page-label-5 {
+#label-list {
   background:url('./gallery/heading_parallax_4.png');
   background-attachment: fixed;
   background-position: center;
@@ -598,7 +598,7 @@ h3 {
   display: grid;
   list-style: none;
   padding: 0px;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 1em;
 }
 #social li {
@@ -729,18 +729,6 @@ h3 {
   font-style: italic;
 }
 
-#Gallery img {
-  display: block;
-  position: relative;
-  margin: auto;
-  max-width: 100%;  
-}
-#Gallery figcaption {
-  color: white;
-  font-size: 15px;
-  text-align: center;
-}
-
 #Releases {
   background:url('./gallery/GeddonSky.jpg');
   background-repeat: no-repeat;
@@ -755,6 +743,18 @@ h3 {
   background-position: center bottom;
   background-size: 100% auto;
   min-height: 100vh;
+}
+
+#Gallery img {
+  display: block;
+  position: relative;
+  margin: auto;
+  max-width: 100%;  
+}
+#Gallery figcaption {
+  color: white;
+  font-size: 15px;
+  text-align: center;
 }
 
 #signup {
